@@ -26,15 +26,15 @@ const CurrentWeather = ({ weatherData }) => {
   return (
     <SafeAreaView
       style={[
-        wrapper,
-        { backgroundColor: weatherType[weatherCondition]?.backgroundColor }
+        wrapper
+        // { backgroundColor: weatherType[weatherCondition]?.backgroundColor }
       ]}
     >
       <View style={container}>
         <Feather
           name={weatherType[weatherCondition]?.icon}
           size={100}
-          color="white"
+          color="#e6e6fa"
         />
         <Text style={temperature}>{`${temp}°`}</Text>
         <Text style={feels}>{`體感溫度: ${feels_like}°`}</Text>
@@ -59,7 +59,8 @@ const CurrentWeather = ({ weatherData }) => {
 
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "#add8e6"
   },
   container: {
     flex: 1,
@@ -67,15 +68,17 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   temperature: {
-    color: "black",
-    fontSize: 48
+    color: "white",
+    fontSize: 48,
+    fontStyle: "italic"
   },
   feels: {
-    fontSize: 30,
-    color: "black"
+    fontSize: 25,
+    color: "white"
   },
   hiLow: {
-    color: "black",
+    color: "white",
+    marginTop: 5,
     fontSize: 20
   },
   hiLowWrapper: {
@@ -88,10 +91,12 @@ const styles = StyleSheet.create({
     marginBottom: 40
   },
   description: {
-    fontSize: 43
+    fontSize: 30,
+    color: "#4682b4"
   },
   message: {
-    fontSize: 25
+    fontSize: 25,
+    color: "#4682b4"
   }
 });
 export default CurrentWeather;

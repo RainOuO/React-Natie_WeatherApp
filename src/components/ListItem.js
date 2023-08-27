@@ -27,8 +27,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    borderWidth: 5,
-    backgroundColor: "indianred"
+    borderRadius: 10,
+
+    // borderWidth: 5,
+    backgroundColor: "#6495ed"
   },
   temp: {
     color: "white",

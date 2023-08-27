@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   container: {
     elevation: 8,
     marginTop: 100,
-    backgroundColor: "blue",
+    backgroundColor: "#dbf5",
     borderRadius: 10,
     padding: 15
   },

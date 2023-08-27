@@ -11,7 +11,7 @@ export const weatherType = {
   },
   Rain: {
     icon: "umbrella",
-    message: "你可能需要帶把傘",
+    message: "你可能需要帶把傘有機率下雨",
     backgroundColor: "#0000ff"
   },
   Snow: {

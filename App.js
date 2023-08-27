@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
     flex: 1,
     ...Platform.select({
       ios: {
-        backgroundColor: "red"
+        backgroundColor: "#fcfc"
       },
       android: {
-        backgroundColor: "green"
+        backgroundColor: "#cccc"
       }
     })
   }

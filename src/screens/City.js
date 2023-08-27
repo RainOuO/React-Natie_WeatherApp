@@ -26,14 +26,17 @@ const City = ({ weatherData }) => {
   } = styles;
   return (
     <SafeAreaView style={container}>
-      <ImageBackground source={require("../../assets/city.jpg")} style={image}>
+      <ImageBackground
+        source={require("../../assets/taipei101.jpg")}
+        style={image}
+      >
         <Text style={[cityText, cityName]}>{name}</Text>
         <Text style={[cityText, countryName]}>{country}</Text>
         <View style={[populationWrapper, rowLayout]}>
           <IconText
             iconName={"user"}
-            iconColor={"red"}
-            bodyText={`人口: ${population}`}
+            iconColor={"#f0fff0"}
+            bodyText={`居住人口: ${population}`}
             bodyTextStyles={populationText}
           />
         </View>
@@ -60,9 +63,11 @@ const styles = StyleSheet.create({
     flex: 1
   },
   image: {
-    flex: 1
+    flex: 1,
+    opacity: 0.9
   },
   cityName: {
+    marginTop: 30,
     fontSize: 40
   },
   countryName: {
@@ -83,7 +88,7 @@ const styles = StyleSheet.create({
   populationText: {
     fontSize: 25,
     marginLeft: 7.5,
-    color: "red"
+    color: "#f0fff0"
   },
   riseSetText: { fontSize: 20, color: "white" },
   riseSetWrapper: {

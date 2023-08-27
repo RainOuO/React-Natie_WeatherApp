@@ -8,21 +8,23 @@ import { Feather } from "@expo/vector-icons";
 const Tab = createBottomTabNavigator();
 
 const Tabs = ({ weather }) => {
+  const { upcoming_weather } = styles;
+
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: "tomato",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: "#f8f8ff",
+        // tabBarInactiveTintColor: "gray",
         tabBarStyle: {
-          backgroundColor: "lightblue"
+          backgroundColor: "#87cefa"
         },
         headerStyle: {
-          backgroundColor: "lightblue"
+          backgroundColor: "#87cefa"
         },
         headerTitleStyle: {
-          fontWeight: "bold",
-          fontSize: 25,
-          color: "tomato"
+          fontWeight: "500",
+          fontSize: 30,
+          color: "#f8f8ff"
         }
       }}
     >
@@ -32,8 +34,8 @@ const Tabs = ({ weather }) => {
           tabBarIcon: ({ focused }) => (
             <Feather
               name={"droplet"}
-              size={25}
-              color={focused ? "tomato" : "black"}
+              size={30}
+              color={focused ? "#1e90ff" : "#f0f8ff"}
             />
           )
         }}
@@ -46,8 +48,8 @@ const Tabs = ({ weather }) => {
           tabBarIcon: ({ focused }) => (
             <Feather
               name={"clock"}
-              size={25}
-              color={focused ? "tomato" : "black"}
+              size={30}
+              color={focused ? "#1e90ff" : "#f0f8ff"}
             />
           )
         }}
@@ -60,8 +62,8 @@ const Tabs = ({ weather }) => {
           tabBarIcon: ({ focused }) => (
             <Feather
               name={"home"}
-              size={25}
-              color={focused ? "tomato" : "black"}
+              size={30}
+              color={focused ? "#1e90ff" : "#f0f8ff"}
             />
           )
         }}
@@ -73,3 +75,9 @@ const Tabs = ({ weather }) => {
 };
 
 export default Tabs;
+const styles = StyleSheet.create({
+  upcoming_weather: {
+    padding: 20,
+    color: "red"
+  }
+});
